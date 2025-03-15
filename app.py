@@ -3,13 +3,13 @@ import streamlit as st
 import openai
 import time
 
-# ✅ Step 1: Load OpenAI API Key Securely from Streamlit Secrets
+# ✅ Step 1: Load OpenAI API Key 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 client = openai.OpenAI(api_key=openai.api_key)
 
-# ✅ Step 2: Hardcoded File IDs (Replace with actual file IDs from OpenAI)
+# ✅ Step 2: Hardcoded File IDs 
 FILE_IDS = [
-    "file-TzkdB42kVQVXUYG2H5XySR"  # Replace with your actual file ID(s)
+    "file-TzkdB42kVQVXUYG2H5XySR"  
 ]
 
 # ✅ Step 3: Create an assistant with the File Search tool
@@ -25,13 +25,13 @@ assistant = client.beta.assistants.create(
         "Do not use any outside knowledge or general information."
     )
 )
-st.write(f"✅ Assistant created with ID: {assistant.id}")
+#st.write(f"✅ Assistant created with ID: {assistant.id}")
 
 # ✅ Step 4: Start a new conversation thread
 thread = client.beta.threads.create()
-st.write(f"✅ Chat session started. Thread ID: {thread.id}")
+st.write(f"✅ Chat session started.")
 
-# ✅ Step 5: Chat Interface (Users Only Ask Questions)
+# ✅ Step 5: Chat Interface 
 st.title("📄 AI PDF Chatbot")
 st.write("Ask questions based on the pre-uploaded PDFs.")
 
