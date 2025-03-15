@@ -36,11 +36,4 @@ A Streamlit-based chatbot that answers user questions **only** from pre-uploaded
    streamlit run app.py
    ```
 
-## 🔹 Usage
-- The assistant only answers based on the **pre-uploaded PDFs**.  
-- The chatbot **does not allow file uploads** (hardcoded file IDs).  
-- If no relevant info is found in the PDFs, it replies with `"I do not have information on that in the provided documents."`  
 
----
-📌 **Author:** Your Name  
-📌 **GitHub:** [your-username](https://github.com/your-username)  
